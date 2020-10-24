@@ -1,0 +1,262 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=PT+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/*Изменяет подсчет ширины блока так, чтобы было удбно верстать*/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/*Убираем линии обводки у некоторых браузеров*/
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+/*Превращаем элементы в блочные*/
+nav, footer, header, aside {
+  display: block;
+}
+
+/*Уравниваем поведение шрифтов и размеров для разных браузеров*/
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*Указываем формам наследовать шрифт*/
+input, button, textarea {
+  font-family: inherit;
+}
+
+/*Убираются различные своёства в разных браузерах*/
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+/*обнуляем заголовки*/
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "AkzidenzGrotesk-BoldCond";
+  src: url("../fonts/AkzidenzGrotesk-BoldCond.eot");
+  src: local("☺"), url("../fonts/AkzidenzGrotesk-BoldCond.woff") format("woff"), url("fonts/AkzidenzGrotesk-BoldCond.ttf") format("truetype"), url("fonts/AkzidenzGrotesk-BoldCond.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+.wrapper {
+  width: 100%;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 880px;
+  margin: 0 auto;
+  width: 100%;
+}
+@media (max-width: 892px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (max-width: 750.98px) {
+  .container {
+    max-width: none;
+    padding: 0 10px;
+  }
+}
+
+header {
+  padding: 29px 0px 33px 0px;
+}
+
+.header-top {
+  display: flex;
+  font-size: 0;
+  justify-content: space-between;
+}
+.header-top__link {
+  color: #000;
+  font-size: 15px;
+  font-family: "AkzidenzGrotesk-BoldCond";
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.header-top-lang {
+  display: flex;
+  font-size: 0;
+}
+.header-top-lang__item {
+  display: block;
+  line-height: 19px;
+  color: #000;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-family: "Bebas Neue";
+  letter-spacing: 1px;
+  padding: 0px 4px;
+  margin: 0px 10px 0px 0px;
+}
+.header-top-lang__item.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.header-bottom {
+  margin: -10px 0px 0px 0px;
+  display: flex;
+  font-size: 0;
+  align-items: center;
+}
+.header-bottom__column {
+  flex: 0 0 33.333%;
+}
+
+.header-bottom-menu--right .header-bottom-menu-list {
+  margin: 0;
+  display: flex;
+  font-size: 0;
+  justify-content: flex-end;
+  text-align: right;
+}
+.header-bottom-menu--right .header-bottom-menu-list li {
+  margin: 0px 0px 0px 45px !important;
+}
+.header-bottom-menu--right .header-bottom-menu-list li:first-child {
+  margin: 0;
+}
+@media (max-width: 892px) {
+  .header-bottom-menu--right .header-bottom-menu-list li {
+    margin: 0px 0px 0px 20px !important;
+  }
+}
+.header-bottom-menu__link {
+  font-family: "AkzidenzGrotesk-BoldCond";
+  color: #000;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.header-bottom-menu-list {
+  display: flex;
+  font-size: 0;
+}
+.header-bottom-menu-list li {
+  margin: 0px 45px 0px 0px;
+}
+.header-bottom-menu-list li:last-child {
+  margin: 0px 0px 0px 0px;
+}
+@media (max-width: 892px) {
+  .header-bottom-menu-list li {
+    margin: 0px 20px 0px 0px;
+  }
+}
+
+.header-logo {
+  display: block;
+  text-align: center;
+}
+.header-logo__text {
+  display: block;
+  color: #000000;
+  font-family: "Bebas Neue";
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+.header-logo__image {
+  display: inline-block;
+  padding: 13px 0px 22px 0px;
+}
+
+.header-menu__icon {
+  display: none;
+}
+
+@media (max-width: 750.98px) {
+  .header-menu__icon {
+    display: block;
+    position: absolute;
+    top: 18px;
+    left: 10px;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 5;
+  }
+  .header-menu__icon span {
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    top: 8px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+  }
+  .header-menu__icon span:first-child {
+    top: 0px;
+  }
+  .header-menu__icon span:last-child {
+    top: auto;
+    bottom: 0px;
+  }
+  .header-menu__icon.active span {
+    transform: scale(0);
+  }
+  .header-menu__icon.active span:first-child {
+    transform: rotate(-45deg);
+    top: 8px;
+  }
+  .header-menu__icon.active span:last-child {
+    transform: rotate(45deg);
+    bottom: 8px;
+  }
+}
